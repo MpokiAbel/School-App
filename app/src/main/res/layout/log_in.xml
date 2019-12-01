@@ -5,58 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="#FC9"
-        android:gravity="center" >
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:text="@string/app_name"
             android:textColor="#000"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
     </RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/loginlayout"
+        android:layout_width="325dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="192dp"
+        android:orientation="vertical"
+        android:padding="@dimen/cardview_compat_inset_shadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
 
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="@string/Usernameext"
-        android:ems="10"
-        android:hint="Registration Number"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="150dp" />
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/number"
+            android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/passwords"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="@string/PasswordText"
-        android:ems="10"
-        android:hint="@string/PasswordText"
-        android:inputType="textPassword"
-        android:maxLength="16"
-        android:minLength="8"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="221dp" />
+        <EditText
+            android:id="@+id/editText10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/PasswordText"
+            android:inputType="textPassword" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="118dp"
+        android:layout_marginLeft="118dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginRight="118dp"
         android:text="@string/LogInTex"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="303dp" />
-
-
+        app:layout_constraintBottom_toBottomOf="@id/loginlayout"
+        app:layout_constraintEnd_toEndOf="@+id/loginlayout"
+        app:layout_constraintStart_toStartOf="@+id/loginlayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

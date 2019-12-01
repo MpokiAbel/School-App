@@ -16,6 +16,8 @@
     <string name="radio_male">"Male"</string>
     <string name="radio_female">"Female"</string>
     <string name="Registration">"Registration"</string>
+    <string name="number">"Registration Number"</string>
+    <string name="register">Register</string>
 
 
     <string-array name="Region_Arrays">
