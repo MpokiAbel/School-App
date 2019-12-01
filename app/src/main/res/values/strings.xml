@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">School App</string>
+    <string name="signIntext">Sign In</string>
+    <string name="Usernameext">Username</string>
+    <string name="PasswordText">Password</string>
+    <string name="LogInTex">Log In</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="radio_male">"Male"</string>
+    <string name="radio_female">"Female"</string>
+    <string name="Registration">"Registration"</string>
+
+
+    <string-array name="Region_Arrays">
+       <item>Arusha</item>
+        <item>Dar es Salaam</item>
+        <item>Dodoma</item>
+        <item>Geita</item>
+        <item>Iringa</item>
+        <item>Kagera</item>
+        <item>Katavi</item>
+        <item>Kigoma</item>
+        <item>Kilimanjaro</item>
+        <item>Lindi</item>
+        <item>Manyara</item>
+        <item>Mara</item>
+        <item>Mbeya</item>
+        <item>Morogoro</item>
+        <item>Mtwara</item>
+        <item>Mwanza</item>
+        <item>Njombe</item>
+        <item>Pwani</item>
+        <item>Rukwa</item>
+        <item>Ruvuma</item>
+        <item>Shinyanga</item>
+        <item>Simiyu</item>
+        <item>Singida</item>
+        <item>Songwe</item>
+        <item>Tabora</item>
+        <item>Tanga</item>
+        <item>Zanzibar</item>
+    </string-array>
+
+</resources>
