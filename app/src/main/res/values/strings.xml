@@ -18,6 +18,7 @@
     <string name="Registration">"Registration"</string>
     <string name="number">"Registration Number"</string>
     <string name="register">Register</string>
+    <string name="logInPage">Log In Page</string>
 
 
     <string-array name="Region_Arrays">

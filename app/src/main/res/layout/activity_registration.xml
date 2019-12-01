@@ -43,7 +43,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Registrationheader">
 
         <EditText
             android:id="@+id/FirstName"
@@ -105,7 +106,8 @@
         <Spinner
             android:id="@+id/Regions"
             android:layout_width="match_parent"
-            android:layout_height="34dp" />
+            android:layout_height="34dp"
+            android:entries="@array/Region_Arrays" />
 
         <Spinner
             android:id="@+id/Districts"
@@ -122,18 +124,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="date"
             android:hint="Study Year"
-            android:textColorHint="@color/colorAccent"/>
+            android:inputType="date"
+            android:textColorHint="@color/colorAccent" />
 
         <EditText
             android:id="@+id/StudySemister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number"
             android:hint="Semister"
-            android:textColorHint="@color/colorAccent"/>
+            android:inputType="number"
+            android:textColorHint="@color/colorAccent" />
 
         <RadioGroup
             android:id="@+id/Gender"
@@ -146,8 +148,8 @@
                 android:layout_width="114dp"
                 android:layout_height="wrap_content"
                 android:text="Gender"
-                android:textSize="20dp"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp" />
 
             <RadioButton
                 android:id="@+id/radioMale"
@@ -173,8 +175,8 @@
                 android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:text="Category"
-                android:textSize="20dp"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp" />
 
             <RadioButton
                 android:id="@+id/radioButton5"
@@ -196,7 +198,7 @@
         android:id="@+id/Register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="40dp"
         android:text="@string/register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
