@@ -83,7 +83,9 @@
             android:focusable="false"
             android:hint="Date Of Birth"
             android:inputType="date"
-            android:textColorHint="@color/colorAccent" />
+            android:textColorHint="@color/colorAccent"
+            android:onClick="myDate"
+            />
 
         <EditText
             android:id="@+id/Email"
