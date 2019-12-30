@@ -22,33 +22,138 @@
 
 
     <string-array name="Region_Arrays">
-       <item>Arusha</item>
-        <item>Dar es Salaam</item>
-        <item>Dodoma</item>
-        <item>Geita</item>
-        <item>Iringa</item>
-        <item>Kagera</item>
-        <item>Katavi</item>
-        <item>Kigoma</item>
-        <item>Kilimanjaro</item>
-        <item>Lindi</item>
-        <item>Manyara</item>
-        <item>Mara</item>
-        <item>Mbeya</item>
-        <item>Morogoro</item>
-        <item>Mtwara</item>
-        <item>Mwanza</item>
-        <item>Njombe</item>
-        <item>Pwani</item>
-        <item>Rukwa</item>
-        <item>Ruvuma</item>
-        <item>Shinyanga</item>
-        <item>Simiyu</item>
-        <item>Singida</item>
-        <item>Songwe</item>
-        <item>Tabora</item>
-        <item>Tanga</item>
-        <item>Zanzibar</item>
+       <item>Arusha</item><item>Dar es Salaam</item><item>Dodoma</item><item>Geita</item>
+        <item>Iringa</item><item>Kagera</item><item>Katavi</item><item>Kigoma</item><item>Kilimanjaro</item>
+        <item>Lindi</item><item>Manyara</item><item>Mara</item><item>Mbeya</item><item>Morogoro</item><item>Mtwara</item>
+        <item>Mwanza</item><item>Njombe</item><item>Pwani</item><item>Rukwa</item>
+        <item>Ruvuma</item><item>Shinyanga</item><item>Simiyu</item><item>Singida</item>
+        <item>Songwe</item><item>Tabora</item><item>Tanga</item><item>Zanzibar</item>
     </string-array>
+
+
+    <string-array name="Daressalaam">
+        <item>Kinondoni</item>
+        <item>Ilala</item><item>Temeke</item><item>Ubungo</item><item>Kigamboni</item>
+
+    </string-array>
+
+    <string-array name="Arusha">
+        <item>Monduli</item> <item>Longido</item> <item>Meru</item> <item>Arusha Vijijini</item>
+        <item>Arusha Mjini</item><item>Ngorongoro</item><item>Karatu</item>
+    </string-array>
+
+
+    <string-array name="Dodoma">
+
+       <item>Bahi</item><item>Chamwino</item><item>Chemba</item><item>Dodoma</item>
+       <item>Mpwapwa</item> <item>Kondoa</item><item>Kongwa</item>
+
+    </string-array>
+
+
+
+
+
+
+
+
+
+    <string-array name="Ilala">
+
+        <item>Buguruni</item><item>Chanika</item><item>Gerezani</item><item>Ilala</item><item>Jangwani</item>
+        <item>Kariakoo</item><item>Kinyerezi</item><item>Kipawa</item><item>Kitunda</item><item>Kisutu</item>
+        <item>Kivukoni</item><item>Kiwalani</item><item>Mchafukoge</item><item>Mchikichini</item><item>Msongola</item>
+        <item>Pugu</item><item>Segerea</item><item>Tabata</item><item>Ukonga</item>
+        <item>Upanga East</item><item>Upanga West</item><item>Vingunguti</item>
+
+    </string-array>
+
+
+    <string-array name="Kinondoni">
+
+        <item>Bunju</item>
+        <item>Goba</item>
+        <item>Hananasif</item>
+        <item>Kawe</item>
+        <item>Kibamba</item>
+        <item>Kigogo</item>
+        <item>Kijitonyama</item>
+        <item>Kimara</item>
+        <item>Kinondoni</item>
+        <item>Kunduchi</item>
+        <item>Mabibo</item>
+        <item>Magomeni</item>
+        <item>Makuburi</item>
+        <item>Makumbusho</item>
+        <item>Makurumula</item>
+        <item>Manzese</item>
+        <item>Mbezi</item>
+        <item>Mburahati</item>
+       <item>Mbweni</item>
+        <item>Mikocheni</item>
+        <item>Msasani</item>
+        <item>Mwananyamala</item>
+        <item>Mzimuni</item>
+        <item>Ndugumbi</item>
+        <item>Sinza</item>
+        <item>Tandale</item>
+        <item>Ubungo</item>
+
+    </string-array>
+
+    <string-array name="Temeke">
+
+        <item>Azimio</item>
+        <item>Chamazi</item>
+        <item>Chang\'ombe</item>
+        <item>Charambe</item>
+        <item>Keko</item>
+        <item>Kigamboni</item>
+        <item>Kibada</item>
+        <item>Kimbiji</item>
+        <item>Kisarawe II</item>
+        <item>Kurasini</item>
+        <item>Makangarawe</item>
+        <item>Mbagala</item>
+        <item>Mbagala Kuu</item>
+        <item>Miburani</item>
+        <item>Mjimwema</item>
+        <item>Mtoni</item>
+        <item>Pemba Mnazi</item>
+        <item>Sandali</item>
+        <item>Somangira</item>
+        <item>Tandika</item>
+        <item>Temeke</item>
+        <item>Toangoma</item>
+        <item>Vijibweni</item>
+        <item>Yombo Vituka</item>
+
+
+    </string-array>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </resources>

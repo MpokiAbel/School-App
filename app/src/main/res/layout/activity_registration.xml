@@ -84,7 +84,6 @@
             android:hint="Date Of Birth"
             android:inputType="date"
             android:textColorHint="@color/colorAccent"
-            android:onClick="myDate"
             />
 
         <EditText
@@ -109,7 +108,7 @@
             android:id="@+id/Regions"
             android:layout_width="match_parent"
             android:layout_height="34dp"
-            android:entries="@array/Region_Arrays" />
+            />
 
         <Spinner
             android:id="@+id/Districts"
@@ -181,13 +180,13 @@
                 android:textSize="20dp" />
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/categoryStudent"
                 android:layout_width="102dp"
                 android:layout_height="wrap_content"
                 android:text="Student" />
 
             <RadioButton
-                android:id="@+id/radioButton6"
+                android:id="@+id/categoryStaff"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Staff" />
