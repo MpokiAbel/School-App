@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="#DAF7A6 "
     android:clickable="true"
     android:onClick="move"
     tools:context=".MainActivity">
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="#FC9"
+        android:background="@android:color/holo_green_dark"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -68,6 +68,7 @@
         android:layout_marginEnd="118dp"
         android:layout_marginRight="118dp"
         android:text="@string/LogInTex"
+        android:background="#"
         app:layout_constraintBottom_toBottomOf="@id/loginlayout"
         app:layout_constraintEnd_toEndOf="@+id/loginlayout"
         app:layout_constraintStart_toStartOf="@+id/loginlayout" />
@@ -76,18 +77,19 @@
         android:id="@+id/RegistrationLink"
         android:layout_width="202dp"
         android:layout_height="42dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginRight="43dp"
-        android:layout_marginBottom="161dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="192dp"
         android:clickable="true"
         android:focusable="auto"
         android:fontFamily="sans-serif"
-        android:onClick="move"
         android:linksClickable="true"
-        android:text="Admin Registrar"
-        android:textColor="@android:color/holo_green_light"
-        android:textSize="20dp"
+        android:onClick="move"
+        android:text="Go to Admin Registrar"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginlayout"
+        app:layout_constraintVertical_bias="0.625" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

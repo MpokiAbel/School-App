@@ -15,56 +15,105 @@
     <string name="login_failed">"Login failed"</string>
     <string name="radio_male">"Male"</string>
     <string name="radio_female">"Female"</string>
-    <string name="Registration">"Registration"</string>
+    <string name="Registration">" Student Registration form"</string>
+    <string name="StaffRegistration">" Staff Registration form"</string>
+    <string name="CategoryRegistration">"Registration"</string>
+
     <string name="number">"Registration Number"</string>
     <string name="register">Register</string>
     <string name="logInPage">Log In Page</string>
+    <string name="categorytext">Choose category</string>
+
 
 
     <string-array name="Region_Arrays">
-       <item>Arusha</item><item>Dar es Salaam</item><item>Dodoma</item><item>Geita</item>
-        <item>Iringa</item><item>Kagera</item><item>Katavi</item><item>Kigoma</item><item>Kilimanjaro</item>
-        <item>Lindi</item><item>Manyara</item><item>Mara</item><item>Mbeya</item><item>Morogoro</item><item>Mtwara</item>
-        <item>Mwanza</item><item>Njombe</item><item>Pwani</item><item>Rukwa</item>
-        <item>Ruvuma</item><item>Shinyanga</item><item>Simiyu</item><item>Singida</item>
-        <item>Songwe</item><item>Tabora</item><item>Tanga</item><item>Zanzibar</item>
+        <item>Arusha</item>
+        <item>Dar es Salaam</item>
+        <item>Dodoma</item>
+        <item>Geita</item>
+        <item>Iringa</item>
+        <item>Kagera</item>
+        <item>Katavi</item>
+        <item>Kigoma</item>
+        <item>Kilimanjaro</item>
+        <item>Lindi</item>
+        <item>Manyara</item>
+        <item>Mara</item>
+        <item>Mbeya</item>
+        <item>Morogoro</item>
+        <item>Mtwara</item>
+        <item>Mwanza</item>
+        <item>Njombe</item>
+        <item>Pwani</item>
+        <item>Rukwa</item>
+        <item>Ruvuma</item>
+        <item>Shinyanga</item>
+        <item>Simiyu</item>
+        <item>Singida</item>
+        <item>Songwe</item>
+        <item>Tabora</item>
+        <item>Tanga</item>
+        <item>Zanzibar</item>
     </string-array>
 
 
     <string-array name="Daressalaam">
         <item>Kinondoni</item>
-        <item>Ilala</item><item>Temeke</item><item>Ubungo</item><item>Kigamboni</item>
+        <item>Ilala</item>
+        <item>Temeke</item>
+        <item>Ubungo</item>
+        <item>Kigamboni</item>
 
     </string-array>
 
     <string-array name="Arusha">
-        <item>Monduli</item> <item>Longido</item> <item>Meru</item> <item>Arusha Vijijini</item>
-        <item>Arusha Mjini</item><item>Ngorongoro</item><item>Karatu</item>
+        <item>Monduli</item>
+        <item>Longido</item>
+        <item>Meru</item>
+        <item>Arusha Vijijini</item>
+        <item>Arusha Mjini</item>
+        <item>Ngorongoro</item>
+        <item>Karatu</item>
     </string-array>
 
 
     <string-array name="Dodoma">
 
-       <item>Bahi</item><item>Chamwino</item><item>Chemba</item><item>Dodoma</item>
-       <item>Mpwapwa</item> <item>Kondoa</item><item>Kongwa</item>
+        <item>Bahi</item>
+        <item>Chamwino</item>
+        <item>Chemba</item>
+        <item>Dodoma</item>
+        <item>Mpwapwa</item>
+        <item>Kondoa</item>
+        <item>Kongwa</item>
 
     </string-array>
 
 
-
-
-
-
-
-
-
     <string-array name="Ilala">
 
-        <item>Buguruni</item><item>Chanika</item><item>Gerezani</item><item>Ilala</item><item>Jangwani</item>
-        <item>Kariakoo</item><item>Kinyerezi</item><item>Kipawa</item><item>Kitunda</item><item>Kisutu</item>
-        <item>Kivukoni</item><item>Kiwalani</item><item>Mchafukoge</item><item>Mchikichini</item><item>Msongola</item>
-        <item>Pugu</item><item>Segerea</item><item>Tabata</item><item>Ukonga</item>
-        <item>Upanga East</item><item>Upanga West</item><item>Vingunguti</item>
+        <item>Buguruni</item>
+        <item>Chanika</item>
+        <item>Gerezani</item>
+        <item>Ilala</item>
+        <item>Jangwani</item>
+        <item>Kariakoo</item>
+        <item>Kinyerezi</item>
+        <item>Kipawa</item>
+        <item>Kitunda</item>
+        <item>Kisutu</item>
+        <item>Kivukoni</item>
+        <item>Kiwalani</item>
+        <item>Mchafukoge</item>
+        <item>Mchikichini</item>
+        <item>Msongola</item>
+        <item>Pugu</item>
+        <item>Segerea</item>
+        <item>Tabata</item>
+        <item>Ukonga</item>
+        <item>Upanga East</item>
+        <item>Upanga West</item>
+        <item>Vingunguti</item>
 
     </string-array>
 
@@ -89,7 +138,7 @@
         <item>Manzese</item>
         <item>Mbezi</item>
         <item>Mburahati</item>
-       <item>Mbweni</item>
+        <item>Mbweni</item>
         <item>Mikocheni</item>
         <item>Msasani</item>
         <item>Mwananyamala</item>
@@ -130,30 +179,6 @@
 
 
     </string-array>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </resources>

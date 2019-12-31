@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void move (View view){
 
-    Intent i =new Intent(this,Registration.class);
+    Intent i =new Intent(this,Registration_Category.class);
     startActivity(i);
 
 

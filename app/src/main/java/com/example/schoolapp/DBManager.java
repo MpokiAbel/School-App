@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.text.Editable;
 
 
 public class DBManager {
@@ -31,6 +30,8 @@ public class DBManager {
         dbHandler.close();
     }
 
+
+
     public void insert(String RegNO, String fname, String mname, String lname, String DateOfbirth,
                        String Email, String PhoneNumber, String region, String district, String ward, String studyYear,
                        String semister, String gender) {
@@ -49,6 +50,7 @@ public class DBManager {
         contentValue.put(dbHandler.studyYear, studyYear);
         contentValue.put(dbHandler.semister, semister);
         contentValue.put(dbHandler.gender, gender);
+        contentValue.put(dbHandler.PhoneNumber, PhoneNumber);
         database.insert(dbHandler.STUDENT_TABLE, null, contentValue);
     }
 

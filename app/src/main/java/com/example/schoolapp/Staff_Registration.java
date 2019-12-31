@@ -25,16 +25,16 @@ import java.util.regex.Pattern;
 
 
 
-public class Registration extends AppCompatActivity {
+public class Staff_Registration extends AppCompatActivity {
 
-         EditText calendar,myEmail,fname,mname,Lname,pnumber,syear,semister;
-         Spinner regionM,districtM,wardM;
-         RadioButton selectedRadioButton,categoryStudent,categoryStaff;
-         Calendar c;
-         Button register;
-         RadioGroup radioGroup;
-         LinearLayout collection;
-         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    EditText calendar,myEmail,fname,mname,Lname,pnumber,syear,semister;
+    Spinner regionM,districtM,wardM;
+    RadioButton selectedRadioButton,categoryStudent,categoryStaff;
+    Calendar c;
+    Button register;
+    RadioGroup radioGroup;
+    LinearLayout collection;
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
 
 
@@ -91,7 +91,7 @@ public class Registration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                new DatePickerDialog(Registration.this, date, c
+                new DatePickerDialog(Staff_Registration.this, date, c
                         .get(Calendar.YEAR), c.get(Calendar.MONTH),
                         c.get(Calendar.DAY_OF_MONTH)).show();
             }
@@ -110,8 +110,8 @@ public class Registration extends AppCompatActivity {
                                                     semister.getText().toString().isEmpty() || myEmail.getText().toString().isEmpty() || !myEmail.getText().toString().trim().matches(emailPattern) ||  calendar.getText().toString().isEmpty() ||"-1".equals(String.valueOf(selectedRadioButtonID)))
 
                                             {
-                                           checkEntered(selectedRadioButtonID);
-                                       }
+                                                checkEntered(selectedRadioButtonID);
+                                            }
                                             else {
 
                                                 dbManager.insert("", fname.getText().toString(), mname.getText().toString(), Lname.getText().toString(), calendar.getText().toString()
@@ -137,7 +137,7 @@ public class Registration extends AppCompatActivity {
 
         //First Spinner initialization
 
-       ArrayAdapter<CharSequence> adapter;
+        ArrayAdapter<CharSequence> adapter;
         adapter = ArrayAdapter.createFromResource( this ,
                 R.array.Region_Arrays, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -171,7 +171,7 @@ public class Registration extends AppCompatActivity {
         });
 
 
-        }
+    }
 
 
 
@@ -260,33 +260,33 @@ public class Registration extends AppCompatActivity {
 
     public void checkEntered(int selectedRadioButtonID) {
 
-            if (fname.getText().toString().isEmpty())
-                fname.setError("Enter firstname");
-            if (mname.getText().toString().isEmpty())
-                mname.setError("Enter middle name");
-            if (Lname.getText().toString().isEmpty())
-                Lname.setError("Enter last name");
-            if (pnumber.getText().toString().isEmpty())
-                pnumber.setError("Enter Phone number");
-            if (syear.getText().toString().isEmpty())
-                syear.setError("Enter Study Year");
-            if (semister.getText().toString().isEmpty())
-                semister.setError("Enter semister");
-            if (myEmail.getText().toString().isEmpty())
-                myEmail.setError("EnterEmail Address");
-            if (!myEmail.getText().toString().trim().matches(emailPattern))
-                myEmail.setError("Invalid Email Address");
-            if (calendar.getText().toString().isEmpty())
-                calendar.setError("Enter Date of Birth");
-            if ("-1".equals(String.valueOf(selectedRadioButtonID)))
-               Toast.makeText(this, "Select Gender", Toast.LENGTH_SHORT).show();
+        if (fname.getText().toString().isEmpty())
+            fname.setError("Enter firstname");
+        if (mname.getText().toString().isEmpty())
+            mname.setError("Enter middle name");
+        if (Lname.getText().toString().isEmpty())
+            Lname.setError("Enter last name");
+        if (pnumber.getText().toString().isEmpty())
+            pnumber.setError("Enter Phone number");
+        if (syear.getText().toString().isEmpty())
+            syear.setError("Enter Study Year");
+        if (semister.getText().toString().isEmpty())
+            semister.setError("Enter semister");
+        if (myEmail.getText().toString().isEmpty())
+            myEmail.setError("EnterEmail Address");
+        if (!myEmail.getText().toString().trim().matches(emailPattern))
+            myEmail.setError("Invalid Email Address");
+        if (calendar.getText().toString().isEmpty())
+            calendar.setError("Enter Date of Birth");
+        if ("-1".equals(String.valueOf(selectedRadioButtonID)))
+            Toast.makeText(this, "Select Gender", Toast.LENGTH_SHORT).show();
 
 
 
 
 
 
-        }
+    }
 
 
 
