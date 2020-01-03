@@ -48,7 +48,7 @@
             android:textColor="@android:color/holo_green_dark"
             android:textSize="25dp" />
 
-        <TextView
+        <Button
             android:id="@+id/categoryStudent"
             android:layout_width="331dp"
             android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
             android:onClick="move_student"
             android:textSize="20dp" />
 
-        <TextView
+        <Button
             android:id="@+id/categoryStaff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

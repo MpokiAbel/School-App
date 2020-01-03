@@ -12,6 +12,9 @@ public class Registration_Category extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration__category);
+
+
+
     }
 
 
@@ -27,8 +30,8 @@ public class Registration_Category extends AppCompatActivity {
 
     public void move_staff (View view){
 
-        Intent i =new Intent(this,Staff_Registration.class);
-        startActivity(i);
+        Intent intent =new Intent(this,Staff.class);
+        startActivity(intent);
 
 
     }

@@ -42,7 +42,7 @@
 
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/editlogin"
             android:layout_width="324dp"
             android:layout_height="63dp"
             android:ems="10"
@@ -50,7 +50,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editText10"
+            android:id="@+id/logPassword"
             android:layout_width="324dp"
             android:layout_height="63dp"
             android:ems="10"
@@ -60,7 +60,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/login"
         android:layout_width="178dp"
         android:layout_height="41dp"
         android:layout_marginStart="118dp"
@@ -68,7 +68,7 @@
         android:layout_marginEnd="118dp"
         android:layout_marginRight="118dp"
         android:text="@string/LogInTex"
-        android:background="#"
+        android:background="#DAF7A6 "
         app:layout_constraintBottom_toBottomOf="@id/loginlayout"
         app:layout_constraintEnd_toEndOf="@+id/loginlayout"
         app:layout_constraintStart_toStartOf="@+id/loginlayout" />

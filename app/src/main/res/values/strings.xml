@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">School App</string>
+    <string name="password">password</string>
     <string name="signIntext">Sign In</string>
+    <string name="confirm">SUCCESS</string>
     <string name="Usernameext">Username</string>
     <string name="PasswordText">Password</string>
     <string name="LogInTex">Log In</string>
@@ -23,7 +25,6 @@
     <string name="register">Register</string>
     <string name="logInPage">Log In Page</string>
     <string name="categorytext">Choose category</string>
-
 
 
     <string-array name="Region_Arrays">

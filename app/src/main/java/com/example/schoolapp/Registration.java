@@ -3,9 +3,11 @@ package com.example.schoolapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
-import android.database.Cursor;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,20 +15,24 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.Calendar;
 import java.util.Locale;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
+import java.util.Random;
 
 
 public class Registration extends AppCompatActivity {
 
+
+        TextView regno;
          EditText calendar,myEmail,fname,mname,Lname,pnumber,syear,semister;
          Spinner regionM,districtM,wardM;
          RadioButton selectedRadioButton,categoryStudent,categoryStaff;
@@ -35,9 +41,7 @@ public class Registration extends AppCompatActivity {
          RadioGroup radioGroup;
          LinearLayout collection;
          String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-
-
-
+        int year = Calendar.getInstance().get(Calendar.YEAR);
 
 
     @Override
@@ -46,9 +50,7 @@ public class Registration extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
 
 
-        final DBManager dbManager  = new DBManager(this);
-        dbManager.open();
-
+        regno=(TextView)findViewById(R.id.regno);
         collection=(LinearLayout)findViewById(R.id.RegistrationLayout);
         fname=(EditText)findViewById(R.id.FirstName);
         mname=(EditText)findViewById(R.id.MiddleName);
@@ -59,8 +61,6 @@ public class Registration extends AppCompatActivity {
         regionM=(Spinner) findViewById(R.id.Regions);
         districtM=(Spinner) findViewById(R.id.Districts);
         wardM=(Spinner) findViewById(R.id.Wards);
-        categoryStaff=(RadioButton)findViewById(R.id.categoryStaff);
-        categoryStudent=(RadioButton)findViewById(R.id.categoryStudent);
         register=(Button)findViewById(R.id.Register) ;
         calendar =(EditText)findViewById(R.id.Date);
         myEmail=(EditText)findViewById(R.id.Email);
@@ -86,6 +86,9 @@ public class Registration extends AppCompatActivity {
             }
         };
 
+
+
+
         calendar.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -93,14 +96,20 @@ public class Registration extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 new DatePickerDialog(Registration.this, date, c
                         .get(Calendar.YEAR), c.get(Calendar.MONTH),
-                        c.get(Calendar.DAY_OF_MONTH)).show();
+                        c.get(Calendar.DAY_OF_MONTH)).show();int number=gen();
             }
         });
+
 
 
         register.setOnClickListener(new View.OnClickListener(){
                                         @Override
                                         public void onClick(View v) {
+
+
+
+
+                                            String s=String.valueOf(R.string.password);
 
                                             int selectedRadioButtonID = radioGroup.getCheckedRadioButtonId();
 
@@ -113,19 +122,32 @@ public class Registration extends AppCompatActivity {
                                            checkEntered(selectedRadioButtonID);
                                        }
                                             else {
+                                                int number=gen();
+                                                String registrationNumber =String.valueOf(year)+"-04-"+String.valueOf(number);
+                                                regno.setText("Registration Number:"+registrationNumber);
 
-                                                dbManager.insert("", fname.getText().toString(), mname.getText().toString(), Lname.getText().toString(), calendar.getText().toString()
-                                                        , myEmail.getText().toString(), pnumber.getText().toString(), regionM.getSelectedItem().toString(), districtM.getSelectedItem().toString(), wardM.getSelectedItem().toString(),
-                                                        syear.getText().toString(), semister.getText().toString(),selectedRadioButton.getText().toString());
-                                            }
+                                                /*if (res==true) {
+                                                    success();
+                                                    long res1 = mydb.check(registrationNumber, "password");
+
+                                                    Toast.makeText(Registration.this, String.valueOf(res1), Toast.LENGTH_SHORT).show();
 
 
+                                                    if (res1 == true)
+                                                        Toast.makeText(Registration.this, "LOGGED IN", Toast.LENGTH_SHORT).show();
+                                                    else
+                                                        Toast.makeText(Registration.this, "INVALID USERNAME AND PASSWORD", Toast.LENGTH_SHORT).show();
+                                                }else
+                                                    Toast.makeText(getApplicationContext(),"NOT LOGGED IN",Toast.LENGTH_SHORT).show();
+
+                                            }*/
+
+                                                }}
 
 
-                                        }
-                                    }
+                                        });
 
-        );
+
 
 
 
@@ -290,7 +312,22 @@ public class Registration extends AppCompatActivity {
 
 
 
+        public void success(){
 
+            Snackbar mySnackbar = Snackbar.make(findViewById(R.id.studentRegistration), R.string.confirm, Snackbar.LENGTH_SHORT);
+            mySnackbar.show();
+
+        }
+
+
+
+
+
+
+    public int gen() {
+        Random r = new Random( System.currentTimeMillis() );
+        return ((1 + r.nextInt(2)) * 10000 + r.nextInt(10000));
+    }
 
     @Override
     protected void onStart() {

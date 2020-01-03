@@ -7,10 +7,10 @@
     android:background="#DAF7A6"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".Registration">
+    tools:context=".Staff">
 
     <RelativeLayout
-        android:id="@+id/Registrationheader"
+        android:id="@+id/StaffRegistrationheader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/TopView"
+            android:id="@+id/StaffTopView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -34,7 +34,7 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/RegistrationLayout"
+        android:id="@+id/StaffRegistrationLayout"
         android:layout_width="332dp"
         android:layout_height="562dp"
         android:layout_marginBottom="95dp"
@@ -49,34 +49,34 @@
 
 
         <EditText
-            android:id="@+id/FirstName"
+            android:id="@+id/StaffFirstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="First Name"
             android:inputType="textPersonName"
-             />
+            />
 
         <EditText
-            android:id="@+id/MiddleName"
+            android:id="@+id/StaffMiddleName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Middle Name"
             android:inputType="textPersonName"
-             />
+            />
 
         <EditText
-            android:id="@+id/LastName"
+            android:id="@+id/StaffLastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Last Name"
             android:inputType="textPersonName"
-             />
+            />
 
         <EditText
-            android:id="@+id/Date"
+            android:id="@+id/StaffDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -89,61 +89,61 @@
             />
 
         <EditText
-            android:id="@+id/Email"
+            android:id="@+id/StaffEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress"
-             />
+            />
 
         <EditText
-            android:id="@+id/Phone"
+            android:id="@+id/StaffPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Phone Number"
             android:inputType="phone"
-             />
+            />
 
         <Spinner
-            android:id="@+id/Regions"
+            android:id="@+id/StaffRegions"
             android:layout_width="match_parent"
             android:layout_height="34dp"
             />
 
         <Spinner
-            android:id="@+id/Districts"
+            android:id="@+id/StaffDistricts"
             android:layout_width="match_parent"
             android:layout_height="35dp" />
 
         <Spinner
-            android:id="@+id/Wards"
+            android:id="@+id/StaffWards"
             android:layout_width="match_parent"
             android:layout_height="35dp" />
 
 
         <RadioGroup
-            android:id="@+id/Gender"
+            android:id="@+id/StaffGender"
             android:layout_width="wrap_content"
             android:layout_height="47dp"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tv"
+                android:id="@+id/Stafftv"
                 android:layout_width="114dp"
                 android:layout_height="wrap_content"
                 android:text="Gender"
                 android:textSize="20dp" />
 
             <RadioButton
-                android:id="@+id/radioMale"
+                android:id="@+id/StaffradioMale"
                 android:layout_width="106dp"
                 android:layout_height="wrap_content"
                 android:text="@string/radio_male" />
 
             <RadioButton
-                android:id="@+id/radioFemale"
+                android:id="@+id/StaffradioFemale"
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
                 android:text="@string/radio_female" />
@@ -154,13 +154,13 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/Register"
+        android:id="@+id/StaffRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:text="@string/register"
         android:background="@android:color/holo_green_dark"
-        app:layout_constraintBottom_toBottomOf="@id/RegistrationLayout"
+        app:layout_constraintBottom_toBottomOf="@id/StaffRegistrationLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />

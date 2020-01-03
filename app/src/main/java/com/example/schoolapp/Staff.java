@@ -3,7 +3,6 @@ package com.example.schoolapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
-import android.database.Cursor;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.view.View;
@@ -20,51 +19,38 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.Locale;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-
-
-public class Staff_Registration extends AppCompatActivity {
-
+public class Staff extends AppCompatActivity {
     EditText calendar,myEmail,fname,mname,Lname,pnumber,syear,semister;
     Spinner regionM,districtM,wardM;
-    RadioButton selectedRadioButton,categoryStudent,categoryStaff;
+    RadioButton selectedRadioButton;
     Calendar c;
     Button register;
     RadioGroup radioGroup;
     LinearLayout collection;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration);
+        setContentView(R.layout.activity_staff);
 
 
-        final DBManager dbManager  = new DBManager(this);
-        dbManager.open();
+        final databasehelper dbManager  = new databasehelper(this);
 
-        collection=(LinearLayout)findViewById(R.id.RegistrationLayout);
-        fname=(EditText)findViewById(R.id.FirstName);
-        mname=(EditText)findViewById(R.id.MiddleName);
-        Lname=(EditText)findViewById(R.id.LastName);
-        pnumber=(EditText)findViewById(R.id.Phone);
-        syear=(EditText)findViewById(R.id.StudyYear);
-        semister=(EditText)findViewById(R.id.StudySemister);
-        regionM=(Spinner) findViewById(R.id.Regions);
-        districtM=(Spinner) findViewById(R.id.Districts);
-        wardM=(Spinner) findViewById(R.id.Wards);
-        categoryStaff=(RadioButton)findViewById(R.id.categoryStaff);
-        categoryStudent=(RadioButton)findViewById(R.id.categoryStudent);
-        register=(Button)findViewById(R.id.Register) ;
-        calendar =(EditText)findViewById(R.id.Date);
-        myEmail=(EditText)findViewById(R.id.Email);
-        radioGroup=(RadioGroup)findViewById(R.id.Gender);
+
+        collection=(LinearLayout)findViewById(R.id.StaffRegistrationLayout);
+        fname=(EditText)findViewById(R.id.StaffFirstName);
+        mname=(EditText)findViewById(R.id.StaffMiddleName);
+        Lname=(EditText)findViewById(R.id.StaffLastName);
+        pnumber=(EditText)findViewById(R.id.StaffPhone);
+        regionM=(Spinner) findViewById(R.id.StaffRegions);
+        districtM=(Spinner) findViewById(R.id.StaffDistricts);
+        wardM=(Spinner) findViewById(R.id.StaffWards);
+        register=(Button)findViewById(R.id.StaffRegister) ;
+        calendar =(EditText)findViewById(R.id.StaffDate);
+        myEmail=(EditText)findViewById(R.id.StaffEmail);
+        radioGroup=(RadioGroup)findViewById(R.id.StaffGender);
         c=Calendar.getInstance();
 
 
@@ -91,7 +77,7 @@ public class Staff_Registration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                new DatePickerDialog(Staff_Registration.this, date, c
+                new DatePickerDialog(Staff.this, date, c
                         .get(Calendar.YEAR), c.get(Calendar.MONTH),
                         c.get(Calendar.DAY_OF_MONTH)).show();
             }
@@ -106,17 +92,14 @@ public class Staff_Registration extends AppCompatActivity {
 
                                             selectedRadioButton = (RadioButton) findViewById(selectedRadioButtonID);
 
-                                            if(fname.getText().toString().isEmpty() || mname.getText().toString().isEmpty() ||Lname.getText().toString().isEmpty() || pnumber.getText().toString().isEmpty() || syear.getText().toString().isEmpty()||
-                                                    semister.getText().toString().isEmpty() || myEmail.getText().toString().isEmpty() || !myEmail.getText().toString().trim().matches(emailPattern) ||  calendar.getText().toString().isEmpty() ||"-1".equals(String.valueOf(selectedRadioButtonID)))
+                                            if(fname.getText().toString().isEmpty() || mname.getText().toString().isEmpty() ||Lname.getText().toString().isEmpty() || pnumber.getText().toString().isEmpty() || myEmail.getText().toString().isEmpty() || !myEmail.getText().toString().trim().matches(emailPattern) ||  calendar.getText().toString().isEmpty() ||"-1".equals(String.valueOf(selectedRadioButtonID)))
 
                                             {
                                                 checkEntered(selectedRadioButtonID);
                                             }
-                                            else {
+                                         else {
 
-                                                dbManager.insert("", fname.getText().toString(), mname.getText().toString(), Lname.getText().toString(), calendar.getText().toString()
-                                                        , myEmail.getText().toString(), pnumber.getText().toString(), regionM.getSelectedItem().toString(), districtM.getSelectedItem().toString(), wardM.getSelectedItem().toString(),
-                                                        syear.getText().toString(), semister.getText().toString(),selectedRadioButton.getText().toString());
+
                                             }
 
 
@@ -268,10 +251,6 @@ public class Staff_Registration extends AppCompatActivity {
             Lname.setError("Enter last name");
         if (pnumber.getText().toString().isEmpty())
             pnumber.setError("Enter Phone number");
-        if (syear.getText().toString().isEmpty())
-            syear.setError("Enter Study Year");
-        if (semister.getText().toString().isEmpty())
-            semister.setError("Enter semister");
         if (myEmail.getText().toString().isEmpty())
             myEmail.setError("EnterEmail Address");
         if (!myEmail.getText().toString().trim().matches(emailPattern))
@@ -318,3 +297,5 @@ public class Staff_Registration extends AppCompatActivity {
 
 
 }
+
+
