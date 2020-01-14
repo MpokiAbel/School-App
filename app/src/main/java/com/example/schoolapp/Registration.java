@@ -42,6 +42,7 @@ public class Registration extends AppCompatActivity {
          LinearLayout collection;
          String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         int year = Calendar.getInstance().get(Calendar.YEAR);
+        schoolAppDB myDB;
 
 
     @Override
@@ -50,7 +51,7 @@ public class Registration extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
 
 
-        regno=(TextView)findViewById(R.id.regno);
+
         collection=(LinearLayout)findViewById(R.id.RegistrationLayout);
         fname=(EditText)findViewById(R.id.FirstName);
         mname=(EditText)findViewById(R.id.MiddleName);
@@ -66,6 +67,7 @@ public class Registration extends AppCompatActivity {
         myEmail=(EditText)findViewById(R.id.Email);
         radioGroup=(RadioGroup)findViewById(R.id.Gender);
         c=Calendar.getInstance();
+        myDB=new schoolAppDB(this);
 
 
 
@@ -107,45 +109,40 @@ public class Registration extends AppCompatActivity {
                                         public void onClick(View v) {
 
 
-
-
-                                            String s=String.valueOf(R.string.password);
+                                            String s = "password";
 
                                             int selectedRadioButtonID = radioGroup.getCheckedRadioButtonId();
-
                                             selectedRadioButton = (RadioButton) findViewById(selectedRadioButtonID);
 
-                                            if(fname.getText().toString().isEmpty() || mname.getText().toString().isEmpty() ||Lname.getText().toString().isEmpty() || pnumber.getText().toString().isEmpty() || syear.getText().toString().isEmpty()||
-                                                    semister.getText().toString().isEmpty() || myEmail.getText().toString().isEmpty() || !myEmail.getText().toString().trim().matches(emailPattern) ||  calendar.getText().toString().isEmpty() ||"-1".equals(String.valueOf(selectedRadioButtonID)))
 
-                                            {
-                                           checkEntered(selectedRadioButtonID);
-                                       }
-                                            else {
-                                                int number=gen();
-                                                String registrationNumber =String.valueOf(year)+"-04-"+String.valueOf(number);
-                                                regno.setText("Registration Number:"+registrationNumber);
+                                            if (fname.getText().toString().isEmpty() || mname.getText().toString().isEmpty() || Lname.getText().toString().isEmpty() || pnumber.getText().toString().isEmpty() || syear.getText().toString().isEmpty() ||
+                                                    semister.getText().toString().isEmpty() || myEmail.getText().toString().isEmpty() || !myEmail.getText().toString().trim().matches(emailPattern) || calendar.getText().toString().isEmpty() || "-1".equals(String.valueOf(selectedRadioButtonID))) {
 
-                                                /*if (res==true) {
+                                                checkEntered(selectedRadioButtonID);
+                                            } else {
+
+
+                                                int number = gen();
+                                                String registrationNumber = String.valueOf(year) + "-04-" + String.valueOf(number);
+
+                                                Boolean res = myDB.insert(registrationNumber, fname.getText().toString().trim(), mname.getText().toString().trim(), Lname.getText().toString().trim(), calendar.getText().toString().trim(),
+                                                        myEmail.getText().toString().trim(), pnumber.getText().toString().trim(), regionM.getSelectedItem().toString(), districtM.getSelectedItem().toString(), wardM.getSelectedItem().toString(),
+                                                        syear.getText().toString().trim(), semister.getText().toString().trim(), selectedRadioButton.getText().toString(), s
+                                                );
+
+
+                                                if (res == true) {
                                                     success();
-                                                    long res1 = mydb.check(registrationNumber, "password");
 
-                                                    Toast.makeText(Registration.this, String.valueOf(res1), Toast.LENGTH_SHORT).show();
+                                                } else
+                                                    Toast.makeText(getApplicationContext(), "SOMETHING WENT WRONG", Toast.LENGTH_LONG).show();
 
+                                            }
 
-                                                    if (res1 == true)
-                                                        Toast.makeText(Registration.this, "LOGGED IN", Toast.LENGTH_SHORT).show();
-                                                    else
-                                                        Toast.makeText(Registration.this, "INVALID USERNAME AND PASSWORD", Toast.LENGTH_SHORT).show();
-                                                }else
-                                                    Toast.makeText(getApplicationContext(),"NOT LOGGED IN",Toast.LENGTH_SHORT).show();
-
-                                            }*/
-
-                                                }}
+                                        }});
 
 
-                                        });
+
 
 
 

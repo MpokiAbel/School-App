@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DAF7A6 "
+    android:background="@color/background"
     android:clickable="true"
     android:onClick="move"
     tools:context=".MainActivity">
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@android:color/holo_green_dark"
+        android:background="#2F4F4F"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="@string/logInPage"
-            android:textColor="#000"
+            android:textColor="#DCDCDC"
             android:textSize="25sp" />
     </RelativeLayout>
 
@@ -47,7 +47,8 @@
             android:layout_height="63dp"
             android:ems="10"
             android:hint="@string/number"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            />
 
         <EditText
             android:id="@+id/logPassword"
@@ -68,7 +69,7 @@
         android:layout_marginEnd="118dp"
         android:layout_marginRight="118dp"
         android:text="@string/LogInTex"
-        android:background="#DAF7A6 "
+        android:background="#F5EDEE "
         app:layout_constraintBottom_toBottomOf="@id/loginlayout"
         app:layout_constraintEnd_toEndOf="@+id/loginlayout"
         app:layout_constraintStart_toStartOf="@+id/loginlayout" />

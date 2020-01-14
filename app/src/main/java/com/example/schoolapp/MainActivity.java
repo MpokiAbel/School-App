@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button login;
     EditText edtUsername,edtPassword;
+    schoolAppDB myDB;
 
 
 
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         login=(Button)findViewById(R.id.login);
         edtUsername=(EditText)findViewById(R.id.editlogin);
         edtPassword=(EditText)findViewById(R.id.logPassword);
+        myDB=new schoolAppDB(this);
+
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,20 +42,19 @@ public class MainActivity extends AppCompatActivity {
                         String user=edtUsername.getText().toString().trim();
                         String Password=edtPassword.getText().toString().trim();
 
+                        Boolean res1 = myDB.checkUser(user,Password);
 
-                        //Toast.makeText(MainActivity.this, String.valueOf(res), Toast.LENGTH_SHORT).show();
+                        if (res1 == true){
+                            Intent intent =new Intent(MainActivity.this,course_manager.class);
+                            startActivity(intent);
+                        }
 
-/*
-                        if (res==true)
-                            Toast.makeText(MainActivity.this,"LOGGED IN",Toast.LENGTH_SHORT).show();
                         else
-                            Toast.makeText(MainActivity.this,"INVALID USERNAME AND PASSWORD",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "INVALID USERNAME AND PASSWORD", Toast.LENGTH_SHORT).show();
 
                         }
 
                     }
-*/}}
-
         });
 
     }
@@ -63,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
 
 /*

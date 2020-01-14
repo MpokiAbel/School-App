@@ -20,6 +20,8 @@
     <string name="Registration">" Student Registration form"</string>
     <string name="StaffRegistration">" Staff Registration form"</string>
     <string name="CategoryRegistration">"Registration"</string>
+    <string name="navigation_drawer_open">"Open navigation drawer"</string>
+    <string name="navigation_drawer_close">"Close navigation drawer"</string>
 
     <string name="number">"Registration Number"</string>
     <string name="register">Register</string>

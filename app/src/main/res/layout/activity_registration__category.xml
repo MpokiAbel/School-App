@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DAF7A6"
+    android:background="@color/background"
     tools:context=".Registration_Category">
 
     <RelativeLayout
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@android:color/holo_green_dark"
+        android:background="#2F4F4F"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -27,12 +27,13 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:text="@string/CategoryRegistration"
-            android:textColor="#000"
+            android:textColor="#DCDCDC"
             android:textSize="25sp" />
     </RelativeLayout>
+
     <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="334dp"
+        android:layout_height="230dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,21 +51,23 @@
 
         <Button
             android:id="@+id/categoryStudent"
-            android:layout_width="331dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:onClick="move_student"
             android:padding="10dp"
             android:text="Student"
-            android:onClick="move_student"
             android:textSize="20dp" />
 
         <Button
             android:id="@+id/categoryStaff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textSize="20dp"
+            android:background="@color/background"
             android:onClick="move_staff"
-            android:text="Staff" />
+            android:padding="10dp"
+            android:text="Staff"
+            android:textSize="20dp" />
     </RadioGroup>
 
 

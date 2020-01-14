@@ -17,8 +17,11 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.Random;
 
 public class Staff extends AppCompatActivity {
     EditText calendar,myEmail,fname,mname,Lname,pnumber,syear,semister;
@@ -29,6 +32,14 @@ public class Staff extends AppCompatActivity {
     RadioGroup radioGroup;
     LinearLayout collection;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    schoolAppDB myDB;
+    int year = Calendar.getInstance().get(Calendar.YEAR);
+
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +47,7 @@ public class Staff extends AppCompatActivity {
         setContentView(R.layout.activity_staff);
 
 
-        final databasehelper dbManager  = new databasehelper(this);
+         myDB  = new schoolAppDB(this);
 
 
         collection=(LinearLayout)findViewById(R.id.StaffRegistrationLayout);
@@ -88,6 +99,10 @@ public class Staff extends AppCompatActivity {
                                         @Override
                                         public void onClick(View v) {
 
+
+
+                                            String s = "password";
+
                                             int selectedRadioButtonID = radioGroup.getCheckedRadioButtonId();
 
                                             selectedRadioButton = (RadioButton) findViewById(selectedRadioButtonID);
@@ -98,6 +113,21 @@ public class Staff extends AppCompatActivity {
                                                 checkEntered(selectedRadioButtonID);
                                             }
                                          else {
+
+                                                int number = gen();
+                                                String registrationNumber =String.valueOf(number);
+
+                                                Boolean res = myDB.insertstaff(registrationNumber, fname.getText().toString().trim(), mname.getText().toString().trim(), Lname.getText().toString().trim(), calendar.getText().toString().trim(),
+                                                        myEmail.getText().toString().trim(), pnumber.getText().toString().trim(), regionM.getSelectedItem().toString(), districtM.getSelectedItem().toString(), wardM.getSelectedItem().toString(),
+                                                         selectedRadioButton.getText().toString(), s);
+
+
+                                                if (res == true) {
+                                                    success();
+
+                                                } else
+                                                    Toast.makeText(getApplicationContext(), "SOMETHING WENT WRONG", Toast.LENGTH_LONG).show();
+
 
 
                                             }
@@ -157,9 +187,17 @@ public class Staff extends AppCompatActivity {
     }
 
 
+    public void success(){
 
+        Snackbar mySnackbar = Snackbar.make(findViewById(R.id.studentRegistration), R.string.confirm, Snackbar.LENGTH_SHORT);
+        mySnackbar.show();
 
+    }
 
+    public int gen() {
+        Random r = new Random( System.currentTimeMillis() );
+        return ((1 + r.nextInt(2)) * 10000 + r.nextInt(10000));
+    }
 
 
     public void update(){
