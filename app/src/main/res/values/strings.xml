@@ -11,7 +11,6 @@
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
@@ -27,6 +26,16 @@
     <string name="register">Register</string>
     <string name="logInPage">Log In Page</string>
     <string name="categorytext">Choose category</string>
+    <string name="welcome_Registration">
+
+        This functionality allows you as a student to register courses for the next academic year.
+
+    </string>
+    <string name="changePassword">
+        This functionality allows you to change your password any time you wish to do so.</string>
+    <string name="Mydetails">
+        This functionality allows you to view your details any time you wish to do so.
+    </string>
 
 
     <string-array name="Region_Arrays">
@@ -150,7 +159,7 @@
         <item>Sinza</item>
         <item>Tandale</item>
         <item>Ubungo</item>
-
+<item>Select Regions</item>
     </string-array>
 
     <string-array name="Temeke">

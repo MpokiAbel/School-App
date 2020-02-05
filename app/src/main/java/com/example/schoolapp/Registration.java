@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,7 +40,7 @@ public class Registration extends AppCompatActivity {
          Calendar c;
          Button register;
          RadioGroup radioGroup;
-         LinearLayout collection;
+         RelativeLayout collection;
          String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         int year = Calendar.getInstance().get(Calendar.YEAR);
         schoolAppDB myDB;
@@ -52,7 +53,7 @@ public class Registration extends AppCompatActivity {
 
 
 
-        collection=(LinearLayout)findViewById(R.id.RegistrationLayout);
+        collection=(RelativeLayout)findViewById(R.id.RegistrationLayout);
         fname=(EditText)findViewById(R.id.FirstName);
         mname=(EditText)findViewById(R.id.MiddleName);
         Lname=(EditText)findViewById(R.id.LastName);
@@ -87,7 +88,6 @@ public class Registration extends AppCompatActivity {
                 update();
             }
         };
-
 
 
 
@@ -144,16 +144,6 @@ public class Registration extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
         //First Spinner initialization
 
        ArrayAdapter<CharSequence> adapter;
@@ -191,11 +181,6 @@ public class Registration extends AppCompatActivity {
 
 
         }
-
-
-
-
-
 
 
     public void update(){

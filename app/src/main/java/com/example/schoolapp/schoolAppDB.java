@@ -44,7 +44,7 @@ public class schoolAppDB extends SQLiteOpenHelper {
         db.execSQL("create table "+STUDENT_TABLE+"("+REGISTRATION_NUMBER+" PRIMARY KEY,"+FIRST_NAME+" TEXT,"+MIDDLE_NAME+" TEXT,"+LAST_NAME+"" +
                 " TEXT,"+DOB+" TEXT,"+EMAIL+" TEXT,"+PHONE_NUMBER+" TEXT,"+REGION+" TEXT,"+DISTRICT+" TEXT,"+WARD+" TEXT,"+STUDY_YEAR+" TEXT,"+SEMESTER+" TEXT,"+GENDER+" TEXT,"+PASSWORD+" TEXT)");
 
-        db.execSQL("create table "+STUDENT_TABLE+"("+REGISTRATION_NUMBER+" PRIMARY KEY,"+FIRST_NAME+" TEXT,"+MIDDLE_NAME+" TEXT,"+LAST_NAME+"" +
+        db.execSQL("create table "+STAFF_TABLE+"("+REGISTRATION_NUMBER+" PRIMARY KEY,"+FIRST_NAME+" TEXT,"+MIDDLE_NAME+" TEXT,"+LAST_NAME+"" +
                 " TEXT,"+DOB+" TEXT,"+EMAIL+" TEXT,"+PHONE_NUMBER+" TEXT,"+REGION+" TEXT,"+DISTRICT+" TEXT,"+WARD+" TEXT,"+GENDER+" TEXT,"+PASSWORD+" TEXT)");
     }
 
@@ -103,7 +103,7 @@ public class schoolAppDB extends SQLiteOpenHelper {
         myValues.put(GENDER,gender);
         myValues.put(PASSWORD,pwd);
 
-        long ins= db.insert(STUDENT_TABLE,null,myValues);
+        long ins= db.insert(STAFF_TABLE,null,myValues);
 
         if (ins>0)return true;
         else return false;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,7 +8,6 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:id="@+id/studentRegistration"
-    android:gravity="center"
     android:orientation="vertical"
     tools:context=".Registration">
 
@@ -18,8 +17,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="#2F4F4F"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent">
+
+        >
 
         <TextView
             android:id="@+id/TopView"
@@ -28,166 +27,246 @@
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:text="@string/Registration"
             android:textColor="#DCDCDC"
             android:textSize="25sp" />
+
     </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/RegistrationLayout"
-        android:layout_width="332dp"
-        android:layout_height="562dp"
-        android:layout_marginBottom="95dp"
-        android:orientation="vertical"
-        android:padding="@dimen/cardview_compat_inset_shadow"
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Registrationheader"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Registrationheader">
+        >
 
-
-
-        <EditText
-            android:id="@+id/FirstName"
+        <RelativeLayout
+            android:id="@+id/RegistrationLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="First Name"
-            android:inputType="textPersonName"
-             />
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
 
-        <EditText
-            android:id="@+id/MiddleName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Middle Name"
-            android:inputType="textPersonName"
-             />
 
-        <EditText
-            android:id="@+id/LastName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Last Name"
-            android:inputType="textPersonName"
-             />
-
-        <EditText
-            android:id="@+id/Date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:editable="false"
-            android:ems="10"
-            android:focusable="false"
-            android:hint="Date Of Birth"
-            android:inputType="date"
-
-            />
-
-        <EditText
-            android:id="@+id/Email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-
-             />
-
-        <EditText
-            android:id="@+id/Phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Phone Number"
-            android:inputType="phone"
-
-             />
-
-        <Spinner
-            android:id="@+id/Regions"
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            />
-
-        <Spinner
-            android:id="@+id/Districts"
-            android:layout_width="match_parent"
-            android:layout_height="35dp" />
-
-        <Spinner
-            android:id="@+id/Wards"
-            android:layout_width="match_parent"
-            android:layout_height="35dp" />
-
-        <EditText
-            android:id="@+id/StudyYear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Study Year"
-            android:inputType="date"
-
-             />
-
-        <EditText
-            android:id="@+id/StudySemister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Semister"
-            android:inputType="number"
-
-            />
-
-        <RadioGroup
-            android:id="@+id/Gender"
-            android:layout_width="wrap_content"
-            android:layout_height="47dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tv"
-                android:layout_width="114dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:text="Gender"
+                android:layout_marginTop="40dp"
+                android:id="@+id/FirstNametag"
+                android:layout_centerHorizontal="true"
 
-                android:textSize="20dp" />
+                >
 
-            <RadioButton
-                android:id="@+id/radioMale"
-                android:layout_width="106dp"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/FirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="First Name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="330dp"
+                android:id="@+id/MiddleNametag"
                 android:layout_height="wrap_content"
-                android:text="@string/radio_male" />
+                android:layout_below="@+id/FirstNametag"
+                android:layout_centerHorizontal="true"
 
-            <RadioButton
-                android:id="@+id/radioFemale"
-                android:layout_width="135dp"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/MiddleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Middle Name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:text="@string/radio_female" />
+                android:layout_centerHorizontal="true"
 
-        </RadioGroup>
+                android:layout_below="@+id/MiddleNametag"
+                android:id="@+id/LastNametag"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/LastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last Name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LastNametag"
+                android:id="@+id/Datetag"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="Date Of Birth"
+                    android:inputType="date" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-    </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/Emailtag"
+                android:layout_centerHorizontal="true"
 
-    <Button
-        android:id="@+id/Register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:text="@string/register"
-        android:background="#F5EDEE "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+                android:layout_below="@+id/Datetag"
+                android:layout_marginTop="20dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone_numbertag"
+                android:layout_below="@id/Emailtag"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Number"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Spinner
+                android:id="@+id/Regions"
+                android:layout_width="330dp"
+                android:layout_height="40dp"
+                android:spinnerMode="dropdown"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/phone_numbertag"
+                android:layout_marginTop="20dp" />
+
+            <Spinner
+                android:id="@+id/Districts"
+                android:layout_width="330dp"
+                android:layout_below="@id/Regions"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+
+            <Spinner
+                android:id="@+id/Wards"
+                android:layout_width="330dp"
+                android:layout_below="@+id/Districts"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:id="@+id/StudyYear"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:layout_below="@+id/Wards"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="Study Year"
+                android:inputType="date"
+
+                />
+
+
+            <EditText
+                android:id="@+id/StudySemister"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+
+                android:hint="Semister"
+                android:layout_below="@id/StudyYear"
+                android:inputType="number"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/Gender"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+
+                android:layout_below="@+id/StudySemister"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_male" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_female"
+
+                    />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/Register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="#F5EDEE "
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:layout_below="@+id/Gender"
+                android:text="@string/register" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

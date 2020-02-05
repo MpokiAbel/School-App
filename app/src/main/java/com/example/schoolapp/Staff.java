@@ -1,7 +1,5 @@
 package com.example.schoolapp;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
@@ -11,14 +9,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import com.google.android.material.snackbar.Snackbar;
-
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.Random;
@@ -30,13 +26,10 @@ public class Staff extends AppCompatActivity {
     Calendar c;
     Button register;
     RadioGroup radioGroup;
-    LinearLayout collection;
+    RelativeLayout collection;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     schoolAppDB myDB;
     int year = Calendar.getInstance().get(Calendar.YEAR);
-
-
-
 
 
 
@@ -45,12 +38,8 @@ public class Staff extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff);
-
-
          myDB  = new schoolAppDB(this);
-
-
-        collection=(LinearLayout)findViewById(R.id.StaffRegistrationLayout);
+        collection=(RelativeLayout)findViewById(R.id.StaffRegistrationLayout);
         fname=(EditText)findViewById(R.id.StaffFirstName);
         mname=(EditText)findViewById(R.id.StaffMiddleName);
         Lname=(EditText)findViewById(R.id.StaffLastName);
@@ -73,9 +62,6 @@ public class Staff extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 
-
-
-
                 c.set(Calendar.YEAR, year);
                 c.set(Calendar.MONTH, month);
                 c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
@@ -94,13 +80,9 @@ public class Staff extends AppCompatActivity {
             }
         });
 
-
-        register.setOnClickListener(new View.OnClickListener(){
+                register.setOnClickListener(new View.OnClickListener(){
                                         @Override
                                         public void onClick(View v) {
-
-
-
                                             String s = "password";
 
                                             int selectedRadioButtonID = radioGroup.getCheckedRadioButtonId();
@@ -139,14 +121,6 @@ public class Staff extends AppCompatActivity {
                                     }
 
         );
-
-
-
-
-
-
-
-
 
         //First Spinner initialization
 
@@ -189,7 +163,7 @@ public class Staff extends AppCompatActivity {
 
     public void success(){
 
-        Snackbar mySnackbar = Snackbar.make(findViewById(R.id.studentRegistration), R.string.confirm, Snackbar.LENGTH_SHORT);
+        Snackbar mySnackbar = Snackbar.make(findViewById(R.id.StaffRegistration), R.string.confirm, Snackbar.LENGTH_SHORT);
         mySnackbar.show();
 
     }
@@ -297,13 +271,8 @@ public class Staff extends AppCompatActivity {
             calendar.setError("Enter Date of Birth");
         if ("-1".equals(String.valueOf(selectedRadioButtonID)))
             Toast.makeText(this, "Select Gender", Toast.LENGTH_SHORT).show();
-
-
-
-
-
-
     }
+
 
 
 

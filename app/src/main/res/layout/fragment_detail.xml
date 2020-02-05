@@ -2,17 +2,190 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/background"
 
     >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/detailnametag"
+        android:layout_height="wrap_content"
+        android:text="NAME :"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20dp"
+        android:fontFamily="serif"
+        />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="details"
-        android:textSize="30dp"
+        android:id="@+id/detailname"
+        android:layout_toRightOf="@id/detailnametag"
+        android:text="MPOKI ABEL"
+        android:layout_marginLeft="10dp"
+        android:textSize="20dp"
+        android:fontFamily="serif"
         />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/regnotag"
+        android:layout_below="@+id/detailnametag"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:fontFamily="serif"
+        android:text="REG NO :"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="MPOKI"
+        android:id="@+id/regno"
+        android:fontFamily="serif"
+        android:textSize="20dp"
+        android:layout_toEndOf="@id/regnotag"
+        android:layout_alignTop="@+id/regnotag"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/detailemailtag"
+            android:layout_below="@+id/dob"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:fontFamily="serif"
+            android:text="EMAIL :"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="mpokimwailsekcbdkcbjbc"
+            android:id="@+id/detailemail"
+            android:textSize="20dp"
+            android:fontFamily="serif"
+            android:layout_toRightOf="@id/detailemailtag"
+            android:layout_alignTop="@+id/detailemailtag"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone_number"
+            android:layout_below="@+id/detailemail"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:fontFamily="serif"
+            android:text="PHONE NUMBER:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/phone_numbertag"
+            android:fontFamily="serif"
+            android:layout_toRightOf="@id/phone_number"
+            android:layout_alignTop="@+id/phone_number"
+            android:text="mpokimwailsekcbdkcbjbc"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/region"
+            android:layout_below="@+id/phone_number"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:fontFamily="serif"
+            android:text="REGION :"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/regiontag"
+            android:layout_toRightOf="@id/region"
+            android:layout_alignTop="@+id/region"
+            android:fontFamily="serif"
+            android:text="mpokimwailsekcbdkcbjbc"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/district"
+            android:layout_below="@+id/region"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:fontFamily="serif"
+            android:text="DISTRICT :"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/districttag"
+            android:layout_toRightOf="@id/district"
+            android:layout_alignTop="@+id/district"
+            android:fontFamily="serif"
+            android:text="TEMEKE"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ward"
+            android:layout_below="@+id/district"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:fontFamily="serif"
+            android:text="WARD :"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="serif"
+            android:layout_toRightOf="@id/ward"
+            android:layout_alignTop="@+id/ward"
+            android:id="@+id/wardtag"
+            android:text="KIJICHI"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dob"
+            android:layout_below="@+id/regno"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:fontFamily="serif"
+            android:text="DATE OF BIRTH :"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/dobtag"
+            android:fontFamily="serif"
+            android:layout_toRightOf="@id/dob"
+            android:layout_alignTop="@+id/dob"
+            android:textSize="20dp"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>
