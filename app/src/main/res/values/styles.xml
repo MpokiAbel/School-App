@@ -1,6 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -10,4 +11,13 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
+    <style name="MyTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">#1B4F72 </item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#21618C</item>
+        <item name="colorControlHighlight">@android:color/holo_green_light</item>
+        <item name="android:statusBarColor">#1B4F72</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+
+    </style>
 </resources>

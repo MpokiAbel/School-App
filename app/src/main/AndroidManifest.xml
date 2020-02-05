@@ -9,14 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".course_manager"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             >
         </activity>
-        <activity android:name=".Staff" />
-        <activity android:name=".Registration_Category" />
-        <activity android:name=".Registration" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".Staff"
+            android:label="Staff Registration"
+            android:theme="@style/MyTheme"/>
+
+
+        <activity android:name=".Registration_Category"
+
+            android:theme="@style/MyTheme" />
+
+
+        <activity android:name=".Registration"
+            android:label="Student Registration"
+            android:theme="@style/MyTheme"/>
+
+
+        <activity android:name=".MainActivity"
+
+            android:theme="@style/MyTheme"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

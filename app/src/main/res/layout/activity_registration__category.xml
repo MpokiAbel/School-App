@@ -7,29 +7,6 @@
     android:background="@color/background"
     tools:context=".Registration_Category">
 
-    <RelativeLayout
-        android:id="@+id/Registrationheader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="#2F4F4F"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/TopView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/CategoryRegistration"
-            android:textColor="#DCDCDC"
-            android:textSize="25sp" />
-    </RelativeLayout>
 
     <RadioGroup
         android:layout_width="334dp"
@@ -46,7 +23,6 @@
             android:layout_height="wrap_content"
             android:padding="20dp"
             android:text="@string/categorytext"
-            android:textColor="@android:color/holo_green_dark"
             android:textSize="25dp" />
 
         <Button
