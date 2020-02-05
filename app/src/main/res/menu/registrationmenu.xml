@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+tools:showIn="navigation_view"   >
+
+<group android:checkableBehavior="single">
+
+    <item
+        android:icon="@drawable/ic_create"
+        android:id="@+id/reg_home"
+        android:title="Student Registration"
+        />
+
+    <item android:id="@+id/staff_registration"
+        android:icon="@drawable/ic_create"
+        android:title="Staff Registration"/>
+
+    <item android:id="@+id/course_reg"
+        android:icon="@drawable/ic_create"
+        android:title="Course Registration"/>
+
+
+    <item
+        android:id="@+id/nav_TimeTable"
+        android:icon="@drawable/ic_create"
+        android:title="Timetable Register" />
+
+    <item
+        android:id="@+id/nav_viewStudents"
+        android:icon="@drawable/ic_local"
+        android:title="View all Students" />
+    <item
+        android:id="@+id/nav_viewcourse"
+        android:icon="@drawable/ic_local"
+        android:title="View all courses"/>
+
+</group>
+
+<item android:id="@+id/reg_logout"
+    android:title="Logout"
+
+
+    />
+
+</menu>

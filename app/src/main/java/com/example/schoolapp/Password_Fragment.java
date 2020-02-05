@@ -23,6 +23,8 @@ public class Password_Fragment extends Fragment {
     EditText currentPass,newPass,confirmedPass;
     String dbPass;
     Button button;
+    schoolAppDB myDB;
+
 
 
     @Nullable
@@ -39,6 +41,7 @@ public class Password_Fragment extends Fragment {
         newPass=view.findViewById(R.id.newpassword);
         confirmedPass=view.findViewById(R.id.confirmedPass);
         button=view.findViewById(R.id.imageButton);
+        myDB=new schoolAppDB(getActivity());
 
         final  course_manager take=(course_manager)getActivity();
 
@@ -54,7 +57,6 @@ public class Password_Fragment extends Fragment {
 
             }
 
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +66,7 @@ public class Password_Fragment extends Fragment {
                         if (newPass.getText().toString().equals(confirmedPass.getText().toString())){
 
 
-                            take.update(newPass.getText().toString(), take.Regno);
+                            myDB.update(newPass.getText().toString(), take.Regno);
                             currentPass.setText("");
                             newPass.setText("");
                             confirmedPass.setText("");

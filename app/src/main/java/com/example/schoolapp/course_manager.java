@@ -189,15 +189,7 @@ public class course_manager extends AppCompatActivity {
    }
 
 
-    public void update(String password,String regno)
-    {
-        myDB2=myDB.getReadableDatabase();
-        ContentValues values =new ContentValues();
-        values.put("PASSWORD",password);
-        myDB2.update("STUDENTS",values,"REGISTRATION_NUMBER ="+regno,null);
 
-
-    }
 
 
     public Cursor password(String regno){

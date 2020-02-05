@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="center"
+    android:id="@+id/StaffRegistration"
+    android:orientation="vertical"
+    tools:context=".Staff"
+
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/StaffRegistrationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:id="@+id/StaffFirstNametag"
+                android:layout_centerHorizontal="true"
+
+                >
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/StaffFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="First Name"
+                    android:inputType="textPersonName" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="330dp"
+                android:id="@+id/StaffMiddleNametag"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/StaffFirstNametag"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/StaffMiddleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Middle Name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:layout_below="@+id/StaffMiddleNametag"
+                android:id="@+id/StaffLastNametag"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/StaffLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last Name"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/StaffLastNametag"
+                android:id="@+id/StaffDatetag"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/StaffDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="Date Of Birth"
+                    android:inputType="date" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/StaffEmailtag"
+                android:layout_centerHorizontal="true"
+
+                android:layout_below="@+id/StaffDatetag"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/StaffEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/Staffphone_numbertag"
+                android:layout_below="@id/StaffEmailtag"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/StaffPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Number"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/StaffRegions"
+                android:layout_width="330dp"
+                android:layout_height="40dp"
+                android:spinnerMode="dropdown"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/Staffphone_numbertag"
+                android:layout_marginTop="20dp" />
+
+            <Spinner
+                android:id="@+id/StaffDistricts"
+                android:layout_width="330dp"
+                android:layout_below="@id/StaffRegions"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+
+            <Spinner
+                android:id="@+id/StaffWards"
+                android:layout_width="330dp"
+                android:layout_below="@+id/StaffDistricts"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="20dp" />
+
+
+
+            <RadioGroup
+                android:id="@+id/StaffGender"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+
+                android:layout_below="@+id/StaffWards"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Stafftv"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/StaffradioMale"
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_male" />
+
+                <RadioButton
+                    android:id="@+id/StaffradioFemale"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_female"
+
+                    />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/StaffRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="#F5EDEE "
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:layout_below="@+id/StaffGender"
+                android:text="@string/register" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
+
+
+

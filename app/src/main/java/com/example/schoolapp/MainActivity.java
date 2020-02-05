@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button login , registrar;
+    Button login ;
     EditText edtUsername,edtPassword;
     schoolAppDB myDB;
 
@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         login=(Button)findViewById(R.id.login);
         edtUsername=(EditText)findViewById(R.id.editlogin);
         edtPassword=(EditText)findViewById(R.id.logPassword);
-        registrar=findViewById(R.id.RegistrationLink);
 
         myDB=new schoolAppDB(this);
 
@@ -36,42 +35,38 @@ public class MainActivity extends AppCompatActivity {
 
         super.onResume();
 
-        registrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent =new Intent(MainActivity.this,Registration_Category.class);
-                startActivity(intent);
-            }
-        });
-
-
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                if (edtUsername.getText().toString().equals("Admin") & edtPassword.getText().toString().equals("12345")){
+                    Intent intent =new Intent(MainActivity.this,registrationmanager.class);
+                    startActivity(intent);
 
-                if (edtUsername.getText().toString().isEmpty() || edtPassword.getText().toString().isEmpty()) {
-                    if (edtUsername.getText().toString().isEmpty()) {
-                        edtUsername.setError("Enter Registration Number");
-                    } if(edtPassword.getText().toString().isEmpty())
-                        edtPassword.setError("Enter Password");
                 }
-                else{
+                    else{
 
-                    String user=edtUsername.getText().toString().trim();
-                    String Password=edtPassword.getText().toString().trim();
+                    if (edtUsername.getText().toString().isEmpty() || edtPassword.getText().toString().isEmpty()) {
+                        if (edtUsername.getText().toString().isEmpty()) {
+                            edtUsername.setError("Enter Registration Number");
+                        }
+                        if (edtPassword.getText().toString().isEmpty())
+                            edtPassword.setError("Enter Password");
+                    } else {
 
-                    Boolean res1 = myDB.checkUser(user,Password);
+                        String user = edtUsername.getText().toString().trim();
+                        String Password = edtPassword.getText().toString().trim();
 
-                    if (res1 == true){
-                        Intent intent =new Intent(MainActivity.this,course_manager.class);
-                        intent.putExtra("Registration_number",edtUsername.getText().toString());
-                        startActivity(intent);
+                        Boolean res1 = myDB.checkUser(user, Password);
+
+                        if (res1 == true) {
+                            Intent intent = new Intent(MainActivity.this, course_manager.class);
+                            intent.putExtra("Registration_number", edtUsername.getText().toString());
+                            startActivity(intent);
+                        } else
+                            Toast.makeText(MainActivity.this, "INVALID USERNAME AND PASSWORD", Toast.LENGTH_SHORT).show();
                     }
-
-                    else
-                        Toast.makeText(MainActivity.this, "INVALID USERNAME AND PASSWORD", Toast.LENGTH_SHORT).show();
                 }
             }
         });

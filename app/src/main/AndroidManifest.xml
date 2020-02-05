@@ -11,9 +11,12 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".course_manager"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:theme="@style/AppTheme"
             >
         </activity>
+        <activity android:name=".registrationmanager"
+            android:theme="@style/AppTheme"
+            />
 
         <activity android:name=".Staff"
             android:label="Staff Registration"

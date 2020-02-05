@@ -125,6 +125,14 @@ public class schoolAppDB extends SQLiteOpenHelper {
 
     }
 
+    public void update(String password,String regno)
+    {
+        SQLiteDatabase db=getReadableDatabase();
+        ContentValues values =new ContentValues();
+        values.put("PASSWORD",password);
+        db.update("STUDENTS",values,"REGISTRATION_NUMBER ="+regno,null);
+
+    }
 
 
 }
